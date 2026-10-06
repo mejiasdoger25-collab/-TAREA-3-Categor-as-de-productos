@@ -1,0 +1,95 @@
+
+### POST Crear producto
+POST http://localhost:8080/api/product
+Content-Type: application/json
+
+{
+  "name": "Pan y picos",
+  "price": 1,
+  "details": "Servicio de mesa"
+}
+
+### POST Crear producto - Error 1
+POST http://localhost:8080/api/product
+Content-Type: application/json
+
+{
+  "name": "",
+  "price": 1,
+  "details": "Servicio de mesa"
+}
+
+### POST Crear producto - Error 2
+POST http://localhost:8080/api/product
+Content-Type: application/json
+
+{
+  "name": "Pan y picos",
+  "price": -1,
+  "details": "Servicio de mesa"
+}
+
+
+### POST Crear producto - Error 3
+POST http://localhost:8080/api/product
+Content-Type: application/json
+
+{
+  "name": "Pan y picos",
+  "price": 1,
+  "details": null
+}
+
+### GET obtener todos los productos
+GET http://localhost:8080/api/product
+
+### GET obtener producto id 1
+GET http://localhost:8080/api/product/1
+
+
+### PUT Modificar producto
+PUT http://localhost:8080/api/product/1
+Content-Type: application/json
+
+{
+  "name": "Pan y picos",
+  "price": -13,
+  "details": "Servicio de mesa por persona"
+}
+
+### DELETE borrar producto id 1
+DELETE http://localhost:8080/api/product/1
+
+
+
+
+
+
+
+### Categories
+
+
+### GET Obtener todas las categorías
+GET http://localhost:8080//api/category
+
+### POST Crear category
+POST http://localhost:8080/api/category
+Content-Type: application/json
+{
+  "id": 1,
+  "name": "Congelados"
+}
+
+### GET obtener category id 1
+GET http://localhost:8080//api/category/1
+
+### PUT Modificar category
+PUT http://localhost:8080/api/category/1
+Content-Type: application/json
+{
+  "id": 2,
+  "name": "Verduras"
+}
+
+### DELETE borrar category id 1
+DELETE http://localhost:8080/api/category/1
